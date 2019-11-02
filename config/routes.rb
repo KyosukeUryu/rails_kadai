@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'tweets#index'
+  root to: 'tweets#toppage'
 
-  resources :tweets
+  resources :tweets do
+    collection do
+      get :toppage
+    end
+  end
 end
