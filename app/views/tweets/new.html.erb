@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ツイッターもどき</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/new.css">
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="left">トップページ</li>
+        <div class="right">
+          <li>一覧をみる</li>
+          <li>新規投稿</li>
+        </div>
+      </ul>
+    </header>
+    <section class="main-header">
+      <%= image_tag "landscape.jpg", size: "1440x400" %>
+    </section>
+    <section class="new_main">
+      <h2>ここでツイート！</h2>
+      <%= form_with(model: @tweet, local: true) do |form| %>
+        <%= form.label :content %>
+        <%= form.text_field :content %>
+
+        <%= form.submit %>
+      <% end %>
+    </section>
+    <footer>
+      <p>Copyright ©️ 2019 Kyosuke Uryu</p>
+    </footer>
+  </body>
+</html>
