@@ -13,10 +13,10 @@ class TweetsController < ApplicationController
   end
 
   def create
+    @tweet = Tweet.new(tweet_params)
     if params[:back]
       render :new
     else
-      @tweet = Tweet.new(tweet_params)
       if @tweet.save
         redirect_to tweets_path, notice: '投稿しました！'
       else
