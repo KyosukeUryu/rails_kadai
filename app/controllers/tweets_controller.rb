@@ -19,9 +19,6 @@ class TweetsController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def edit
   end
 
