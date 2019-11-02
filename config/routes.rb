@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :tweets, except: [:show] do
     collection do
       get :toppage
+      post :confirm
     end
   end
 end
