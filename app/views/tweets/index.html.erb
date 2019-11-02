@@ -11,10 +11,10 @@
   <body>
     <header>
       <ul>
-        <li class="left">トップページ</li>
+        <li class="left"><%= link_to 'トップページ', root_path %></li>
         <div class="right">
-          <li>一覧をみる</li>
-          <li>新規投稿</li>
+          <li><%= link_to '一覧を確認', tweets_path %></li>
+          <li><%= link_to '新規投稿', new_tweet_path %></li>
         </div>
       </ul>
     </header>
@@ -26,16 +26,17 @@
       <table>
         <tr>
           <th>id</th>
-          <th>ツイート内容</th>
+          <th>ツイート内容（クリックで編集）</th>
         </tr>
         <% @tweets.each do |twt| %>
         <tr>
           <td><%= twt.id %></td>
-          <td><%= twt.content %></td>
+          <td><%= link_to twt.content, edit_tweet_path(twt.id) %></td>
           <td><%= link_to '削除', tweet_path(twt.id), method: :delete, data: { confirm: '削除しますか？'} %></td>
         </tr>
         <% end %>
       </table>
+      <%= link_to 'トップページに戻る', root_path %>
     </section>
     <footer>
       <p>Copyright ©️ 2019 Kyosuke Uryu</p>

@@ -11,10 +11,10 @@
   <body>
     <header>
       <ul>
-        <li class="left">トップページ</li>
+        <li class="left"><%= link_to 'トップページ', root_path %></li>
         <div class="right">
-          <li>一覧をみる</li>
-          <li>新規投稿</li>
+          <li><%= link_to '一覧を確認', tweets_path %></li>
+          <li><%= link_to '新規投稿', new_tweet_path %></li>
         </div>
       </ul>
     </header>
