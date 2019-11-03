@@ -6,7 +6,6 @@
     <title>ツイッターもどき</title>
     <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
     <link rel="stylesheet" href="../../assets/stylesheets/application.css">
-    <link rel="stylesheet" href="../../assets/stylesheets/index.css">
   </head>
   <body>
     <header>
@@ -25,19 +24,22 @@
       <p><%= notice %></p>
 
       <h1>ツイート一覧はこちら！</h1>
-      <table>
-        <tr>
-          <th>id</th>
-          <th>ツイート内容（クリックで編集）</th>
-        </tr>
-        <% @tweets.each do |twt| %>
-        <tr>
-          <td><%= twt.id %></td>
-          <td><%= link_to twt.content, edit_tweet_path(twt.id) %></td>
-          <td><%= link_to '削除', tweet_path(twt.id), method: :delete, data: { confirm: '削除しますか？'} %></td>
-        </tr>
-        <% end %>
-      </table>
+      <div class="table-contents">
+        <table class="tweets_content">
+          <tr>
+            <th>id</th>
+            <th class="tweet_main">ツイート内容（クリックで編集）</th>
+            <th>削除ボタン</th>
+          </tr>
+          <% @tweets.each do |twt| %>
+          <tr>
+            <td><%= twt.id %></td>
+            <td class="tweet_main"><%= link_to twt.content, edit_tweet_path(twt.id) %></td>
+            <td><%= link_to '削除', tweet_path(twt.id), method: :delete, data: { confirm: '削除しますか？'} %></td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
       <%= link_to 'トップページに戻る', root_path %>
     </section>
     <footer>

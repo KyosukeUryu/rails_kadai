@@ -84,3 +84,28 @@ footer p {
   padding: 5px;
   margin: 0;
 }
+
+/* ここからindex */
+.tweets_content {
+  text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+}
+
+.tweets_content tr {
+  height: 3rem;
+}
+
+.tweets_content th {
+  background-color: #fffacd;
+  border: solid 1px darkgray;
+}
+
+.tweets_content td {
+  border: solid 1px darkgray;
+}
+
+.tweet_main {
+  width: 300px;
+}
