@@ -6,7 +6,6 @@
     <title>ツイッターもどき</title>
     <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
     <link rel="stylesheet" href="../../assets/stylesheets/application.css">
-    <link rel="stylesheet" href="../../assets/stylesheets/new.css">
   </head>
   <body>
     <header>
@@ -25,11 +24,12 @@
       <h2>あなたのツイートはこちら</h2>
       <%= form_with(model: @tweet, local: true) do |form| %>
         <%= form.hidden_field :content %>
+        <div class="form-main">
+          <p>ツイート：<%= @tweet.content %></p>
 
-        <p>ツイート：<%= @tweet.content %></p>
-
-        <%= form.submit '投稿する' %>
-        <%= form.submit '作成画面に戻る', name: "back" %>
+          <%= form.submit '投稿する' %>
+          <%= form.submit '作成画面に戻る', name: "back" %>
+        </div>
       <% end %>
     </section>
     <footer>

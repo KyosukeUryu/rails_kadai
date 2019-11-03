@@ -6,7 +6,6 @@
     <title>ツイッターもどき</title>
     <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
     <link rel="stylesheet" href="../../assets/stylesheets/application.css">
-    <link rel="stylesheet" href="../../assets/stylesheets/new.css">
   </head>
   <body>
     <header>
@@ -23,7 +22,9 @@
     </section>
     <section class="new_main">
       <h2>ここでツイート！</h2>
-      <%= render 'form' %>
+      <div class="form-main">
+        <%= render 'form' %>
+      </div>
     </section>
     <footer>
       <p>Copyright ©️ 2019 Kyosuke Uryu</p>

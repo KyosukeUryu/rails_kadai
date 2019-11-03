@@ -75,13 +75,13 @@ span {
 }
 
 footer {
+  height: 40px;
   background-color: activecaption;
-  height: 30px;
 }
 
 footer p {
   color: white;
-  padding: 5px;
+  padding: 15px;
   margin: 0;
 }
 
@@ -108,4 +108,22 @@ footer p {
 
 .tweet_main {
   width: 300px;
+  font-size: 1.5rem;
+}
+
+.index_main p {
+  font-size: 1.5rem;
+}
+
+/* ここからedit,new,confirm共通 */
+
+.form-main {
+  margin-bottom: 30px;
+}
+
+/* ここからconfirm */
+
+.form-main p {
+  font-size: 1.5rem;
+  font-style: italic;
 }
