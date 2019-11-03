@@ -121,6 +121,14 @@ footer p {
   margin-bottom: 30px;
 }
 
+.error-msg li {
+  list-style: none;
+}
+
+.error-explanation {
+  color: red;
+}
+
 /* ここからconfirm */
 
 .form-main p {
