@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ツイッターもどき</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="left"><%= link_to 'トップページ', root_path %></li>
+        <div class="right">
+          <li><%= link_to '一覧を確認', tweets_path %></li>
+          <li><%= link_to '新規投稿', new_tweet_path %></li>
+        </div>
+      </ul>
+    </header>
+    <section class="main-header">
+      <%= image_tag "landscape.jpg", size: "1440x400" %>
+    </section>
+    <section class="index_main">
+      <p><%= notice %></p>
+
+      <h1>ツイート一覧はこちら！</h1>
+      <div class="table-contents">
+        <table class="tweets_content">
+          <tr>
+            <th>id</th>
+            <th class="tweet_main">ツイート内容（クリックで編集）</th>
+            <th>削除ボタン</th>
+          </tr>
+          <% @tweets.each do |twt| %>
+          <tr>
+            <td><%= twt.id %></td>
+            <td class="tweet_main"><%= link_to twt.content, edit_tweet_path(twt.id) %></td>
+            <td><%= link_to '削除', tweet_path(twt.id), method: :delete, data: { confirm: '削除しますか？'} %></td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+      <p><%= link_to 'トップページに戻る', root_path %></p>
+    </section>
+    <footer>
+      <p>Copyright ©️ 2019 Kyosuke Uryu</p>
+    </footer>
+  </body>
+</html>

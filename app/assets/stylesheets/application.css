@@ -1,15 +1,137 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+html {
+  font-size: 62.5%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  width: 1440px;
+  height: 100%;
+}
+
+.main-header {
+  height: 400px;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  height: 70px;
+  background-color: menu;
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  list-style: none;
+  float: left;
+  color: highlighttext;
+  padding: 20px;
+  margin: 0;
+}
+
+.right {
+  float: right;
+}
+
+.main_toppic {
+  margin: 0;
+  background-color: infobackground;
+}
+
+.main_toppic h1 {
+  font-size: 4rem;
+  padding: 20px;
+  margin: 0;
+}
+
+span {
+  color: red;
+  font-style: bold;
+}
+
+.main_toppic h2 {
+  font-size: 3rem;
+  padding: 20px;
+  margin: 0;
+}
+
+.function {
+  background-color: #eeffff;
+  padding: 15px;
+}
+
+.function_button li {
+  list-style: none;
+  font-size: 2rem;
+}
+
+footer {
+  height: 40px;
+  background-color: activecaption;
+}
+
+footer p {
+  color: white;
+  padding: 15px;
+  margin: 0;
+}
+
+/* ここからindex */
+.tweets_content {
+  text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+}
+
+.tweets_content tr {
+  height: 3rem;
+}
+
+.tweets_content th {
+  background-color: #fffacd;
+  border: solid 1px darkgray;
+}
+
+.tweets_content td {
+  border: solid 1px darkgray;
+}
+
+.tweet_main {
+  width: 300px;
+  font-size: 1.5rem;
+}
+
+.index_main p {
+  font-size: 1.5rem;
+}
+
+/* ここからedit,new,confirm共通 */
+
+.form-main {
+  margin-bottom: 30px;
+}
+
+.error-msg li {
+  list-style: none;
+}
+
+.error-explanation {
+  color: red;
+}
+
+/* ここからconfirm */
+
+.form-main p {
+  font-size: 1.5rem;
+  font-style: italic;
+}

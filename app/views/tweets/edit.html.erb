@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ツイッターもどき</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="left"><%= link_to 'トップページ', root_path %></li>
+        <div class="right">
+          <li><%= link_to '一覧を確認', tweets_path %></li>
+          <li><%= link_to '新規投稿', new_tweet_path %></li>
+        </div>
+      </ul>
+    </header>
+    <section class="main-header">
+      <%= image_tag "landscape.jpg", size: "1440x400" %>
+    </section>
+    <section class="edit_main">
+      <h2>ツイート編集</h2>
+      <%= render 'form' %>
+    </section>
+    <footer>
+      <p>Copyright ©️ 2019 Kyosuke Uryu</p>
+    </footer>
+  </body>
+</html>
